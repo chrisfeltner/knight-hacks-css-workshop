@@ -1,0 +1,116 @@
+/* How is specificity calculated? */
+/* It's a point system! */
+/* Inline styles add 1000 points */
+/* ID selectors add 100 points */
+/* Class selectors add 10 points */
+/* Element selectors add 1 point */
+
+*
+{
+    background-color: bisque;
+}
+
+h1
+{
+    color:firebrick;
+    font-family: Snell Roundhand, cursive;
+    font-size: 3rem;
+}
+
+h2
+{
+    color:cadetblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+p, ol > li
+{
+    color:rgb(108, 107, 109);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#name
+{
+    text-align: center;
+}
+
+.award
+{
+    color:goldenrod
+}
+
+p::first-letter
+{
+    color:firebrick;
+    font-family: Snell Roundhand, cursive;
+    font-size: 40px;
+    line-height: 25px;
+    float: left;
+    padding-top: 4px;
+    padding-right: 8px;
+}
+
+img
+{
+    width: 15em;
+}
+
+.big-picture
+{
+    width: 20em;
+}
+
+.keanu-about-photo
+{
+    float: right;
+    padding: 1em;
+}
+
+.photos-container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.photos-container :nth-child(1)
+{
+    order: 2;
+}
+
+.photos-container :nth-child(2)
+{
+    order: 1;
+}
+
+.photos-container :nth-child(3)
+{
+    order: 3;
+}
+
+.photos-container :nth-child(4)
+{
+    order: 5;
+}
+
+.on-the-bottom
+{
+    align-self: flex-end;
+}
+
+@media only screen and (max-width: 600px) {
+    .keanu-about-photo {
+        float: none
+    }
+    .keanu-about-photo > img
+    {
+        margin: auto;
+        width: 100%
+    }
+    #name
+    {
+        font-size: 2em;
+    }
+}
