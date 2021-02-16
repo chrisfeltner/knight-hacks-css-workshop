@@ -66,6 +66,11 @@ img
     padding: 1em;
 }
 
+.keanu-about-photo > img:hover
+{
+    filter: drop-shadow(10px 10px 10px grey)
+}
+
 .photos-container
 {
     display: flex;
